@@ -5,7 +5,9 @@ import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 import eventsImage from "../assets/events.png";
 import noEvents from "../assets/noEvents.jpg";
+import { useNavigate } from "react-router-dom";
 const Home = () => {
+  const navigate = useNavigate();
   const [schedules, setSchedules] = useState([]);
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
@@ -26,7 +28,7 @@ const Home = () => {
         if (data.error) {
           alert("Please Login " + data.error);
           localStorage.removeItem("token");
-          window.location.href = "/login";
+          navigate("/login");
         } else {
           setSchedules(data.events);
         }
@@ -51,7 +53,7 @@ const Home = () => {
         if (data.error) {
           alert("Please Login " + data.error);
           localStorage.removeItem("token");
-          window.location.href = "/login";
+          navigate("/login");
         } else {
           alert(data.message);
           window.location.reload();
@@ -73,7 +75,7 @@ const Home = () => {
         if (data.error) {
           alert("Please Login " + data.error);
           localStorage.removeItem("token");
-          window.location.href = "/login";
+          navigate("/login");
         } else {
           setDate(data.event.date);
           setTime(data.event.time);
@@ -105,7 +107,7 @@ const Home = () => {
           if (data.error) {
             alert("Please Login " + data.error);
             localStorage.removeItem("token");
-            window.location.href = "/login";
+            navigate("/login");
           } else {
             alert(data.message);
             setHandleEdit(false);
