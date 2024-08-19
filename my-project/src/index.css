@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+@layer components {
+  .underLine_animate {
+    @apply relative;
+  }
+}
+.underLine_animate::after {
+  @apply absolute content-[''] w-full h-1 left-0 bottom-[-4px] 
+  bg-white scale-x-0 hover:scale-x-100 origin-bottom-right
+  hover:origin-bottom-left transition-transform duration-300;
+}
+.hide_the_scrollbar {
+  scrollbar-width: none;
+}
