@@ -14,7 +14,7 @@ const Home = () => {
   const [id, setId] = useState("");
   // console.log(updateSchedule);
   useEffect(() => {
-    fetch("http://localhost:5000/events-list", {
+    fetch("https://calendar-react-app.onrender.com/events-list", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -36,7 +36,7 @@ const Home = () => {
   //handle Delete a Event
   const handleDeleteEvent = (id) => {
     // console.log("delete id", id);
-    fetch("http://localhost:5000/event-delete", {
+    fetch("https://calendar-react-app.onrender.com/event-delete", {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -61,7 +61,7 @@ const Home = () => {
 
   //get an even for Update
   const handleEditionForGetEvent = (id) => {
-    fetch(`http://localhost:5000/event-find/${id}`, {
+    fetch(`https://calendar-react-app.onrender.com/event-find/${id}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -87,7 +87,7 @@ const Home = () => {
     console.log(id);
     e.preventDefault();
     try {
-      fetch("http://localhost:5000/event-update", {
+      fetch("https://calendar-react-app.onrender.com/event-update", {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

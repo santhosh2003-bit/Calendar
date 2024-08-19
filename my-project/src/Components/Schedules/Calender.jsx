@@ -16,7 +16,7 @@ const Calender = () => {
   const [hoveredDate, setHoveredDate] = useState(null);
   const [hoveredEvent, setHoveredEvent] = useState(null);
   useEffect(() => {
-    fetch("http://localhost:5000/events-list", {
+    fetch("https://calendar-react-app.onrender.com/events-list", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -49,7 +49,7 @@ const Calender = () => {
     if (!time || !event) {
       return alert("Please enter time and event");
     }
-    fetch("http://localhost:5000/events-add", {
+    fetch("https://calendar-react-app.onrender.com/events-add", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
