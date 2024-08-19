@@ -28,4 +28,4 @@ app.delete("/event-delete", middleware, eventDelete);
 app.put("/event-update", middleware, eventUpdate);
 app.get("/event-find/:id", middleware, eventFind);
 ConnectDb();
-app.listen(PORT || 8080, () => console.log("Server Running on port 5000"));
+app.listen(5000, () => console.log("Server Running on port 5000"));
