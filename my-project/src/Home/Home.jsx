@@ -210,7 +210,7 @@ const Home = () => {
           </div>
         )}
         {handleEdit && (
-          <div className="text-white absolute bg-[#242424] w-full md:w-96 top-[100%] left-[50%] translate-x-[-50%] translate-y-[50%] p-3 rounded-lg">
+          <div className="text-white absolute bg-[#242424] w-full md:w-96 top-[50%] left-[50%] translate-x-[-50%] translate-y-[50%] p-3 rounded-lg">
             <h1 className="text-white ">
               Schedule for {date ? date : "Loading"}{" "}
             </h1>
