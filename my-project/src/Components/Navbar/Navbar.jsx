@@ -27,13 +27,13 @@ const Navbar = () => {
         <ul className="flex gap-4 text-white items-center ">
           <li
             className="underLine_animate hidden sm:block"
-            onClick={() => (window.location.href = "/register")}
+            onClick={() => (window.location.href = "/login")}
           >
             Sign In
           </li>
           <li
             className="underLine_animate hidden sm:block"
-            onClick={() => (window.location.href = "/login")}
+            onClick={() => (window.location.href = "/register")}
           >
             Sign Up
           </li>
